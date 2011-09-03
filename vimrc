@@ -5,7 +5,7 @@ call pathogen#runtime_append_all_bundles()
 scriptencoding utf-8
 
 " Use zsh.
-set shell=zsh
+set shell=bash
 
 " Enable filetype-specific indenting, syntax, and plugins
 filetype plugin indent on
@@ -145,23 +145,6 @@ let ruby_operators = 1
 " Turn off rails bits of statusbar
 let g:rails_statusline=0
 
-" Clojure config
-
-" Enable gorilla for the lisp on the jvm
-let clj_want_gorilla = 0
-
-" Highlight built-in clojure functions
-let g:clj_highlight_builtins = 1
-
-" Also highlight contrib
-let g:clj_highlight_contrib = 1
-
-" Paren Rainbow (diff colors for diff nestings)
-let g:clj_paren_rainbow = 1
-
-" Auto added used namespaces, generally be awesome
-let g:clj_dynamic_highlighting = 1
-
 
 " NERDCommenter
 let NERDDefaultNesting = 0
@@ -189,12 +172,6 @@ let NERDTreeIgnore=['\.$', '\~$']
 " let g:NeoComplCache_EnableAtStartup=1
 
 
-" AUTOCOMMANDS
-
-function! CustomClojureSettings()
-  set filetype=clojure
-endfunction
-
 " function! CustomJsonSettings()
   " autocmd BufRead *.json set filetype=json
   " au! Syntax json source ~/Downloads/json.vim
@@ -204,7 +181,7 @@ endfunction
 " endfunction
 
 function! CustomMarkdownSettings()
-  set filetype=mkd
+  set filetype=md
 endfunction
 
 augroup SpicyAutoCommands
