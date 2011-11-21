@@ -172,20 +172,20 @@ let NERDTreeIgnore=['\.$', '\~$']
 " let g:NeoComplCache_EnableAtStartup=1
 
 
-" function! CustomJsonSettings()
-  " autocmd BufRead *.json set filetype=json
-  " au! Syntax json source ~/Downloads/json.vim
-  " autocmd FileType json set equalprg=json_reformat
-  " autocmd FileType json set makeprg=jsonval\ %
-  " autocmd FileType json set errorformat=%E%f:\ %m\ at\ line\ %l,%-G%.%#
-" endfunction
+function! CustomJsonSettings()
+  autocmd BufRead *.json set filetype=json
+  au! Syntax json source ~/Downloads/json.vim
+  autocmd FileType json set equalprg=json_reformat
+  autocmd FileType json set makeprg=jsonval\ %
+  autocmd FileType json set errorformat=%E%f:\ %m\ at\ line\ %l,%-G%.%#
+endfunction
 
 function! CustomMarkdownSettings()
   set filetype=md
 endfunction
 
 augroup SpicyAutoCommands
-  autocmd BufEnter,BufWritePost *.clj   call CustomClojureSettings()
+  " autocmd BufEnter,BufWritePost *.clj   call CustomClojureSettings()
   autocmd BufEnter *.markdown call CustomMarkdownSettings()
   " autocmd BufRead *.json call CustomJsonSettings()
   " autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
